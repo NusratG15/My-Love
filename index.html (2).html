@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Jaan</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<style>
+  /* Your CSS styles for the image cards */
+  /* ... */
+
+  body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .image-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    z-index: 1;  /* Add z-index to bring cards to the front */
+  }
+
+  .card {
+    width: 300px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    transition: .5s ease;
+  }
+
+  .card:hover .overlay {
+    width: 100%;
+    height: 100%;
+  }
+
+  .text {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  .balloon-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2; /* Increase z-index to place balloons in front of cards */
+  }
+
+ /* Inside your <style> tag */
+    .balloon {
+    width: 20px;
+    height: 30px;
+    background-color: #FF6384; /* Default color */
+    position: absolute;
+    animation: float 5s linear infinite;
+    border-radius: 50% 50% 40% 40%;
+}
+
+.balloon::before,
+.balloon::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background-color: #FF6384; /* Default color */
+    border-radius: 50%;
+    top: -15px;
+}
+
+.balloon::before {
+    left: 10px;
+    transform: rotate(-45deg);
+}
+
+.balloon::after {
+    right: 10px;
+    transform: rotate(45deg);
+}
+
+
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+    }
+  }
+
+.star-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.star {
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  animation: twinkling 3s infinite;
+}
+
+@keyframes twinkling {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.2);
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+    <div class="star-container"></div>
+    <div class="balloon-container"></div>
+    
+        
+
+  <div class="image-cards">
+    <div class="card">
+      <img src="images/b5.jpg" alt="Image 1">
+      <div class="overlay", style="background-color: #FF6384;">
+        <div class="text">"Once upon a time, a handsome smile entered this world..."</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/b9.jpg" alt="Image 2">
+      <div class="overlay" style="background-color: #FFA500;">
+        <div class="text">"...embarking on journeys that filled his heart with joy."</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/b12.jpg" alt="Image 3">
+      <div class="overlay" style="background-color: #9C27B0;">
+        <div class="text"> "In the comfort of his own world, he found solace and happiness."</div>
+      </div>
+    </div>
+
+
+
+    <div class="card">
+        <img src="images/b1.jpg" alt="Image 1">
+        <div class="overlay" style="background-color: #00FF00;">
+          <div class="text">"His passions fueled his spirit, making him shine brighter with every pursuit."</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/b7.jpg" alt="Image 2">
+        <div class="overlay" style="background-color: #0000FF;">
+          <div class="text">"Laughter was his magic, casting happiness wherever he went."</div>
+        </div>
+      </div>
+  
+      
+  
+      <div class="card">
+        <img src="images/b4.jpg" alt="Image 3">
+        <div class="overlay" style="background-color: #33658A;">
+          <div class="text"> "Dreams danced in his eyes, each one a promise waiting to be fulfilled."</div>
+        </div>
+      </div>
+
+
+
+      <div class="card">
+        <img src="images/b13.jpg" alt="Image 1">
+        <div class="overlay" style="background-color:#FF9800;">
+          <div class="text">"With dedication as his compass, he charted his course towards success." </div>
+        </div>
+      </div>
+  
+
+      <div class="card">
+        <img src="images/b12 (1).jpg" alt="Image 2">
+        <div class="overlay" style="background-color: #2EC4B6;">
+          <div class="text">"His heart overflowed with love, and every gesture spoke volumes." </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <img src="images/b14.jpg" alt="Image 3">
+        <div class="overlay" style="background-color: red ;">
+          <div class="text"> "As the stars twinkle on this special day, know that you shine the brightest. Happy Birthday!" </div>
+        </div>
+      </div>
+    </div>
+</div>
+   
+    
+    <!-- Add more cards as needed -->
+  </div>
+
+  <script>
+    const balloonContainer = document.querySelector(".balloon-container");
+
+    function getRandomBalloonColor() {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    function createBalloon() {
+        const balloon = document.createElement("div");
+        balloon.className = "balloon";
+        balloon.style.left = Math.random() * 100 + "vw";
+        balloon.style.backgroundColor = getRandomBalloonColor();
+        balloonContainer.appendChild(balloon);
+
+        // Remove the balloon after a delay
+        setTimeout(() => {
+            balloon.remove();
+        }, 8000); // Remove after 8 seconds
+    }
+
+    setInterval(createBalloon, 1000); // Create a balloon every 1 second
+</script>
+
+<script>
+    const starContainer = document.querySelector(".star-container");
+
+    function createRandomColor() {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    document.addEventListener("mousemove", (event) => {
+        const star = document.createElement("div");
+        star.className = "star";
+        star.style.left = event.clientX + "px";
+        star.style.top = event.clientY + "px";
+        star.style.backgroundColor = createRandomColor(); // Set random background color
+        starContainer.appendChild(star);
+
+        // Remove the star after a delay
+        setTimeout(() => {
+            star.remove();
+        }, 3000); // Remove after 3 seconds
+    });
+</script>
+</body>
+</html>
+

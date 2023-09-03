@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body
+{
+  background-image: linear-gradient(to right top, #ad5bfa, #f12822, #faf607, #16e031, #12ebbc);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.card {
+	 position: relative;
+	 width: 300px;
+	 height: 425px;
+	 border: 10px solid #9612eb;
+	 margin: 60px auto 0 auto;
+	 box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255), rgba(255, 255, 255, 0.5)), url("https://images.unsplash.com/photo-1527481138388-31827a7c94d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+
+background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+	 background-color: #e6f0e6;
+}
+ .card .text-container {
+	 width: 80%;
+	 height: 80%;
+	 margin: auto;
+}
+ .strikethrough {
+	 text-decoration: line-through;
+}
+ .card .text-container #head {
+	 font-family: 'Nobile', sans-serif;
+	 font-size: 1.5em;
+	 margin: 60px auto 60px auto;
+}
+ .card p {
+	 font-size: 1.1em;
+	 line-height: 1.4;
+	 font-family: 'Nobile';
+	 color: #331717;
+	 font-style: italic;
+	 text-align: center;
+	 margin: 30px auto 0px auto;
+}
+ .card .front {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 margin: -10px 0px 0px -10px;
+	 border: 10px solid #9612eb;
+	 backface-visibility: hidden;
+	 background-color: #9612eb;
+	/* background-image: url($cover-image);
+	 */
+	 background-size: contain;
+	 transform-style: preserve-3d;
+	 transform-origin: 0% 50%;
+	 transform: perspective(800px) rotateY(0deg);
+	 transition: all 0.8s ease-in-out;
+}
+ .card:hover .front {
+	 transform: perspective(800px) rotateY(-170deg);
+	 background-color: #41718d;
+}
+ .card:hover .back {
+	 transform: perspective(800px) rotateY(-170deg);
+	 box-shadow: 7px 0px 5px 0px rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+	 background-color: #d2dcd2;
+}
+ .card .back {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 border: 10px solid #9612eb;
+	 margin: -10px 0px 0px -10px;
+	 backface-visibility: visible;
+	 filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .5));
+	 transform-style: preserve-3d;
+	 transform-origin: 0% 50%;
+	 transform: perspective(800px) rotateY(0deg);
+	 transition: all 0.8s ease-in-out;
+	 background-color: #e6f0e6;
+	 box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.imgset
+{
+  position: relative;
+  z-index: 1;
+  margin-bottom: -215px;
+}
+.imgset img
+{
+    box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+  }
+
+ 
+  .random-image {
+    position: absolute;
+    max-width: 150px;
+    transform: translate(-50%, -50%);
+  }
+
+  
+
+   .shimmer {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(to right, transparent, white, transparent);
+    animation: shimmerFall 2s linear infinite, fadeInOut 4s ease-in-out infinite;
+    opacity: 0;
+  }
+
+  @keyframes shimmerFall {
+    0% {
+      transform: translateY(-50px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(calc(100vh + 50px)) rotate(360deg);
+    }
+  }
+
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color:#333;
+  }
+
+  .footer-box {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #50fd00;
+    border-radius: 10px;
+  }
+
+  .footer-text {
+    font-size: 35px;
+    color: #33f022;
+  }
+
+  .footer-link {
+    color: #007bff;
+    text-decoration: none;
+	font-size: 25px;
+  }
+
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+
+</style>
+</head>
+
+<body>
+	<div class="card">
+	  <div class="back"></div>
+	  <div class="front">
+		<div class="imgset">
+			 <img width="100%" src="https://1.bp.blogspot.com/-Mgj9-rbs65E/XfMoPSD5gtI/AAAAAAAAURk/NBokE2gSS2cTSJ2em5lZ5hJDuTtRN7UVwCLcBGAsYHQ/s1600/2713997.png">
+		   </div>
+	  </div>
+
+	  
+	  <div class="text-container">
+		<p id="head">Happy Birthday! </p>
+		<p>I hope your special day will bring you lots of happiness, love, and fun. You deserve them a lot. Enjoy!</p>
+		<p>Hope your day goes great!</p>
+	  </div>
+</div>
+
+  <div class="image-container">
+	
+	<img src="images/b6.jpg" alt="Image 3" class="random-image" style="top: 35%; left: 95%;">
+    <img src="images/b2.jpg" alt="Image 2" class="random-image" style="top: 80%; left: 85%;">
+	<img src="images/b3.jpg" alt="Image 2" class="random-image" style="top: 35%; left: 75%;">
+	<img src="images/b4.jpg" alt="Image 1" class="random-image" style="top: 80%; left: 65%;">
+	<img src="images/b5.jpg" alt="Image 3" class="random-image" style="top: 35%; left: 55%;">
+	<img src="images/b1.jpg" alt="Image 1" class="random-image" style="top: 80%; left: 45%;">
+    <img src="images/b7.jpg" alt="Image 3" class="random-image" style="top: 35%; left: 35%;">
+	<img src="images/b8.jpg" alt="Image 3" class="random-image" style="top: 80%; left: 25%;">
+    <img src="images/b9.jpg" alt="Image 3" class="random-image" style="top: 35%; left: 15%;">
+    <img src="images/b12.jpg" alt="Image 3" class="random-image" style="top: 80%; left: 5%;">
+    <!-- Add more images with different positions -->
+
+	
+  </div>
+</div>
+</div>
+</div>
+
+  <script>
+    const imageContainer = document.querySelector(".image-container");
+    const numShimmers = 50;
+    const minFallDuration = 2; // Minimum time in seconds for a shimmer to fall
+    const maxFallDuration = 5; // Maximum time in seconds for a shimmer to fall
+    const shimmerColors = ['#FF6384', '#FFC700', '#36A2EB', '#4CAF50', '#E91E63']; // Array of colors
+
+    function getRandomColor() {
+      const randomIndex = Math.floor(Math.random() * shimmerColors.length);
+      return shimmerColors[randomIndex];
+    }
+
+    function createShimmer() {
+      const shimmer = document.createElement("div");
+      shimmer.className = "shimmer";
+      shimmer.style.left = `${Math.random() * imageContainer.offsetWidth}px`; // Random X position within the container
+      shimmer.style.background = getRandomColor();
+      imageContainer.appendChild(shimmer);
+
+      const fallDuration = Math.random() * (maxFallDuration - minFallDuration) + minFallDuration;
+
+      setTimeout(() => {
+        shimmer.remove();
+        createShimmer(); // Generate a new shimmer after removal
+      }, fallDuration * 1000);
+    }
+
+    for (let i = 0; i < numShimmers; i++) {
+      createShimmer();
+    }
+  </script>
+<br>
+<br><br><br>
+
+<footer class="footer">
+    <div class="footer-box">
+      <p class="footer-text">Made with <span style="color: red;">&hearts;</span> by Nusrat G.</p>
+      <p><a class="footer-link" href="roses.html">Visit Another Page</a></p>
+    </div>
+  </footer>
+</body>
+</html>
+
